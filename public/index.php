@@ -50,21 +50,21 @@ function recount(){
 	hrs=hrs%24;
 	mns=mns%60;
 	scs=scs%60;
-	
+
 	var thetext ="";
-	
+
 	if (dys>0){
 		thetext=dys+" day";
 		if(dys!=1){thetext+="s";}
 		thetext+=", ";
 	}
-	
+
 	if (hrs>0){
 		thetext+=hrs+" hour";
 		if(hrs!=1){thetext+="s";}
 		thetext+=", ";
 	}
-	
+
 	if (mns>0){
 		thetext+=mns+" minute";
 		if(mns!=1){thetext+="s";}
@@ -72,18 +72,18 @@ function recount(){
 	}
 	thetext+=scs+" second";
 	if(scs!=1){thetext+="s";}
-	
+
 	var tweeturl="http://twitter.com/home?status=Only "+thetext+" till the unix epoch time reaches 1234567890 http://coolepochcountdown.com";
-	
+
 	$("#timer").html(o.substring(0,10));
 	$('#countdown').text(thetext);
-	
+
 	if(o.substring(0,10)==<?=$coolepoch;?>){partytime();}
 	if(o.substring(0,10)<<?=$coolepoch;?>){
 		document.title=thetext + " to go...";
 		$("#tweet").attr("href",tweeturl);
 	}
-	
+
 	if(finish<30){
 		if(doparty==true){
 			$(".desc").text("Woohoo!!! The epoch timestamp just passed 1234567890!!!");
