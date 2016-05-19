@@ -18,7 +18,7 @@
 <body><div id="main"><span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span><br/>
 <span class="desc">You missed it :( but fear not some other people captured the epoch moment <a href='http://www.youtube.com/watch?v=z7Fl7qCO4Zo&feature=PlayList&p=22DBADA214858C7C&index=0&playnext=1'>on youtube</a> </span><br/>
 <span class="desc2">A quick idea by <a href='http://www.chrisrowe.net'>Chris Rowe</a> follow me on twitter <a href='http://www.twitter.com/chrisrowe'>@chrisrowe</a>
-<!-- &nbsp;&bull;&nbsp; <a href='http://en.wikipedia.org/wiki/Unix_time'>What's the Epoch Time?</a> &nbsp;&bull;&nbsp; Some xkcd <span class="fun">fun</span> with <a href='http://xkcd.com/376/'>epoch fail!</a></span><br/> -->
+&nbsp;&bull;&nbsp; <a href='http://en.wikipedia.org/wiki/Unix_time'>What's the Epoch Time?</a> &nbsp;&bull;&nbsp; Some xkcd <span class="fun">fun</span> with <a href='http://xkcd.com/376/'>epoch fail!</a></span><br/>
 </div><div id="fireworks-template"><div id="fw" class="firework"></div><div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div></div><div id="fireContainer"></div>
 <script>
 soundManager.url='/soundmanager2.swf';
