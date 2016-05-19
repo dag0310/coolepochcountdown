@@ -1,4 +1,4 @@
-<? $coolepoch = "1234567890"; ?><html><head><style type="text/css">body { background-color: #000;color: #fff;font-family:arial,helvetica;font-size:11em;text-align: center;}a{color: #fff;}#main {margin: 0px auto;margin-top: 150px;text-align:center;}.desc, .desc2{clear: both;font-size: 0.09em;line-height: 35px;letter-spacing: 1px;}.desc2{font-size: 0.07em;color: #aaa;}</style>
+<?php $coolepoch = "1234567890"; ?><html><head><style type="text/css">body { background-color: #000;color: #fff;font-family:arial,helvetica;text-align: center;}a{color: #fff;} #timer{font-size:15vw;} #main {margin: 0px auto;margin-top: 150px;text-align:center;}.desc, .desc2{clear: both;font-size:2vw;line-height: 35px;letter-spacing: 1px; max-width:75%; margin:0 auto; line-height:1.5em; margin-top:1em;}.desc2{color: #aaa;}.fun { border-bottom:1px dotted #555; cursor:help;}</style>
 <title>Countdown (actually up) to the UNIX Epoch time being <?=$coolepoch;?>!</title>
 <meta name="description" content="Come join us to watch the countdown (actually up) to the UNIX Epoch time being <?=$coolepoch;?> live on the internets!" />
 <meta name="keywords" content="epoch, countdown, <?=$coolepoch;?>, internets, meme, unix timestamp" />
@@ -16,9 +16,11 @@
 
 
 <body><div id="main"><span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span><br/>
-<span class="desc">You missed it :( but fear not some other people captured the epoch moment <a href='http://www.youtube.com/watch?v=z7Fl7qCO4Zo&feature=PlayList&p=22DBADA214858C7C&index=0&playnext=1'>on youtube</a> </span><br/>
-<span class="desc2">A quick idea by <a href='http://www.chrisrowe.net'>Chris Rowe</a> follow me on twitter <a href='http://www.twitter.com/chrisrowe'>@chrisrowe</a>
-&nbsp;&bull;&nbsp; <a href='http://en.wikipedia.org/wiki/Unix_time'>What's the Epoch Time?</a> &nbsp;&bull;&nbsp; Some xkcd <span class="fun">fun</span> with <a href='http://xkcd.com/376/'>epoch fail!</a></span><br/>
+<p class="desc">You missed 1234567890 :(<br>But fear not - some other people captured the <span class="fun">epoch moment</span> <a href='http://www.youtube.com/watch?v=z7Fl7qCO4Zo&feature=PlayList&p=22DBADA214858C7C&index=0&playnext=1'>on YouTube</a>, or see the <a href="http://abstrusegoose.com/116">Abstruse Goose</a> or <a href='http://xkcd.com/376/'>XKCD</a> cartoon or just read more about Unix time&nbsp;<a href='http://en.wikipedia.org/wiki/Unix_time'>on&nbsp;Wikipedia</a></p>
+
+<p class="desc2">A quick idea by <a href='http://www.chrisrowe.net'>Chris Rowe</a> follow me on Twitter <a href='http://www.twitter.com/chrisrowe'>@chrisrowe</a>
+</p>
+
 </div><div id="fireworks-template"><div id="fw" class="firework"></div><div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div></div><div id="fireContainer"></div>
 <script>
 soundManager.url='/soundmanager2.swf';
