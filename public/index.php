@@ -11,12 +11,16 @@
 </head>
 
 
-<!-- IF YOU'RE TRYING TO CHEAT AND SEE WHAT HAPPENED AT 1234567890 THEN STICK javascript:partytime(); IN YOUR ADDRESS BAR -->
+<!-- IF YOU'RE TRYING TO CHEAT AND SEE WHAT HAPPENED AT <?=$coolepoch;?> THEN STICK javascript:partytime(); IN YOUR ADDRESS BAR -->
 
 
 <body><div id="main"><span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span><br/>
 <p class="desc">
-	<!-- You missed 1234567890 :(<br>But fear not - some other people captured the <span class="fun">epoch moment</span> <a href='https://www.youtube.com/results?search_query=unix%201234567890'>on YouTube</a>, or see the <a href="http://abstrusegoose.com/116">Abstruse Goose</a> or <a href='http://xkcd.com/376/'>XKCD</a> cartoon or just read more about Unix time&nbsp;<a href='http://en.wikipedia.org/wiki/Unix_time'>on&nbsp;Wikipedia</a> -->
+	You missed <?=$coolepoch;?> :(
+	<!--
+	<br>
+	But fear not - some other people captured the <span class="fun">epoch moment</span> <a href='https://www.youtube.com/results?search_query=unix%201234567890'>on YouTube</a>, or see the <a href="http://abstrusegoose.com/116">Abstruse Goose</a> or <a href='http://xkcd.com/376/'>XKCD</a> cartoon or just read more about Unix time&nbsp;<a href='http://en.wikipedia.org/wiki/Unix_time'>on&nbsp;Wikipedia</a>
+	-->
 </p>
 
 <p class="desc2">
@@ -79,7 +83,7 @@ function recount(){
 	thetext+=scs+" second";
 	if(scs!=1){thetext+="s";}
 
-	var tweeturl="http://twitter.com/home?status=Only "+thetext+" till the unix epoch time reaches 1234567890 http://coolepochcountdown.com";
+	var tweeturl="http://twitter.com/home?status=Only "+thetext+" till the unix epoch time reaches <?= $coolepoch ?> http://coolepochcountdown.com";
 
 	$("#timer").html(o.substring(0,10));
 	$('#countdown').text(thetext);
@@ -92,8 +96,8 @@ function recount(){
 
 	if(finish<30){
 		if(doparty==true){
-			$(".desc").text("Woohoo!!! The epoch timestamp just passed 1234567890!!!");
-			var tweeturl="http://twitter.com/home?status=I just watched the unix epoch time reach 1234567890 http://coolepochcountdown.com WAHOO";
+			$(".desc").text("Woohoo!!! The epoch timestamp just passed <?= $coolepoch ?>!!!");
+			var tweeturl="http://twitter.com/home?status=I just watched the unix epoch time reach <?= $coolepoch ?> http://coolepochcountdown.com WAHOO";
 			$("#tweet").attr("href",tweeturl);
 			setTimeout('createFirework(20,50,2,null,null,null,null,null,Math.random()>0.5,true);',(Math.floor(Math.random()*7500)));
 			createFirework(20,50,2,null,null,null,null,null,Math.random()>0.5,true)
@@ -116,16 +120,16 @@ $(".fun").live("click", function(){partytime();});
 function partytime(){
 	finish=0;
 	doparty=true;
-	document.title="HAPPY 1234567890!!!";
+	document.title="HAPPY <?= $coolepoch ?>!!!";
 	soundManager.play('woo');
-	$(".desc").text("Woohoo!!! The epoch timestamp just passed 1234567890!!!");
+	$(".desc").text("Woohoo!!! The epoch timestamp just passed <?= $coolepoch ?>!!!");
 }
 
 function missedit(){
 	if (appended == false){
 		$(".desc2").append("&nbsp;&bull;&nbsp;<span class='fun'>Relive the moment</span>");
 		$(".desc").text("You missed it but you can relive the moment below");
-		var tweeturl="http://twitter.com/home?status=I just watched the unix epoch time reach 1234567890 http://coolepochcountdown.com WAHOO";
+		var tweeturl="http://twitter.com/home?status=I just watched the unix epoch time reach <?= $coolepoch ?> http://coolepochcountdown.com WAHOO";
 		$("#tweet").attr("href",tweeturl);
 		appended=true;
 	}
