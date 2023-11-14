@@ -17,10 +17,8 @@
 <body><div id="main"><span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span><br/>
 <p class="desc">
 	You missed <?=$coolepoch;?> :(
-	<!--
 	<br>
-	But fear not - some other people captured the <span class="fun">epoch moment</span> <a href='https://www.youtube.com/results?search_query=unix%201234567890'>on YouTube</a>, or see the <a href="http://abstrusegoose.com/116">Abstruse Goose</a> or <a href='http://xkcd.com/376/'>XKCD</a> cartoon or just read more about Unix time&nbsp;<a href='http://en.wikipedia.org/wiki/Unix_time'>on&nbsp;Wikipedia</a>
-	-->
+	But fear not - some other people captured the <span class="fun">1234567890 epoch moment</span> <a href='https://www.youtube.com/results?search_query=unix%201234567890'>on YouTube</a>, or see the <a href="http://abstrusegoose.com/116">Abstruse Goose</a> or <a href='http://xkcd.com/376/'>XKCD</a> cartoon or just read more about Unix time&nbsp;<a href='http://en.wikipedia.org/wiki/Unix_time'>on&nbsp;Wikipedia</a>
 </p>
 
 <p class="desc2">
