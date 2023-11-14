@@ -5,7 +5,7 @@
 <meta name="author" content="Chris Rowe" />
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js"></script>
+<script type="text/javascript" src="script/jquery.min.js"></script>
 <script type="text/javascript" src="script/soundmanager2.js"></script>
 <script type="text/javascript" src="script/fireworks.js"></script>
 </head>
