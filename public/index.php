@@ -130,11 +130,6 @@ function missedit(){
 		appended=true;
 	}
 }
-
-var pageTracker=_gat._getTracker("UA-7308649-1");
-pageTracker._trackPageview();
-
-
 </script>
 </body>
 </html>
