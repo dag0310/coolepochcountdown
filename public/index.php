@@ -2,7 +2,7 @@
 <title>Countdown (actually up) to the UNIX Epoch time being <?=$coolepoch;?>!</title>
 <meta name="description" content="Come join us to watch the countdown (actually up) to the UNIX Epoch time being <?=$coolepoch;?> live on the internets!" />
 <meta name="keywords" content="epoch, countdown, <?=$coolepoch;?>, internets, meme, unix timestamp" />
-<meta name="author" content="Chris Rowe" />
+<meta name="author" content="Chris Rowe, Daniel Geymayer" />
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
 <script type="text/javascript" src="script/jquery.min.js"></script>
