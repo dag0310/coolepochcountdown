@@ -1,4 +1,4 @@
-<?php $coolepoch = "1234567890"; ?><!DOCTYPE html>
+<?php $coolepoch = !empty($_GET['t']) ? $_GET['t'] : '1234567890'; ?><!DOCTYPE html>
 <html>
 <head>
 	<title>Countdown (actually up) to the UNIX Epoch time being <?= $coolepoch ?>!</title>
