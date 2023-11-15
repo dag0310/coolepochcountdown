@@ -2,4 +2,4 @@
 
 Celebrating a Cool Epoch Time!
 
-Project goal: Countdown to any UNIX timestamp you like.
+Project goal: Countdown (or actually up) to any UNIX timestamp you like.
