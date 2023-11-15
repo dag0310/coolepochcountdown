@@ -118,7 +118,7 @@ function partytime(){
 function missedit(){
 	if (appended == false){
 		$(".desc2").append("&nbsp;&bull;&nbsp;<span class='fun'>Relive the moment</span>");
-		$(".desc").text("You missed it, but fear not - the next cool epoch time will come soon enough :)");
+		$(".desc").text("You missed <?=$coolepoch;?>, but fear not - the next cool epoch time will come soon enough :)");
 		var tweeturl="http://twitter.com/home?status=I just watched the unix epoch time reach <?= $coolepoch ?> http://coolepochcountdown.com WAHOO";
 		$("#tweet").attr("href",tweeturl);
 		appended=true;
