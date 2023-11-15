@@ -1,25 +1,35 @@
-<?php $coolepoch = "1234567890"; ?><html><head><style type="text/css">body { background-color: #000;color: #fff;font-family:arial,helvetica;text-align: center;}a{color: #fff;} #timer{font-size:15vw;} #main {margin: 0px auto;margin-top: 150px;text-align:center;}.desc, .desc2{clear: both;font-size:2vw;line-height: 35px;letter-spacing: 1px; max-width:75%; margin:0 auto; line-height:1.5em; margin-top:1em;}.desc2{color: #aaa;}.fun { border-bottom:1px dotted #555; cursor:help;}</style>
-<title>Countdown (actually up) to the UNIX Epoch time being <?=$coolepoch;?>!</title>
-<meta name="description" content="Come join us to watch the countdown (actually up) to the UNIX Epoch time being <?=$coolepoch;?> live on the internets!" />
-<meta name="keywords" content="epoch, countdown, <?=$coolepoch;?>, internets, meme, unix timestamp" />
-<meta name="author" content="Chris Rowe, Daniel Geymayer" />
-<link rel="shortcut icon" href="/favicon.ico">
-<link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
-<script type="text/javascript" src="script/jquery.min.js"></script>
-<script type="text/javascript" src="script/fireworks.js"></script>
+<?php $coolepoch = "1234567890"; ?><!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown (actually up) to the UNIX Epoch time being <?= $coolepoch ?>!</title>
+	<meta name="description" content="Come join us to watch the countdown (actually up) to the UNIX Epoch time being <?= $coolepoch ?> live on the internets!">
+	<meta name="keywords" content="epoch, countdown, <?=$coolepoch;?>, internets, meme, unix timestamp">
+	<meta name="author" content="Chris Rowe, Daniel Geymayer">
+	<link rel="icon" href="favicon.ico">
+	<style type="text/css">body { background-color: #000;color: #fff;font-family:arial,helvetica;text-align: center;}a{color: #fff;} #timer{font-size:15vw;} #main {margin: 0px auto;margin-top: 150px;text-align:center;}.desc, .desc2{clear: both;font-size:2vw;line-height: 35px;letter-spacing: 1px; max-width:75%; margin:0 auto; line-height:1.5em; margin-top:1em;}.desc2{color: #aaa;}.fun { border-bottom:1px dotted #555; cursor:help;}</style>
+	<link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen">
+	<script type="text/javascript" src="script/jquery.min.js"></script>
+	<script type="text/javascript" src="script/fireworks.js"></script>
 </head>
 
-<body><div id="main"><span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span><br/>
-<p class="desc">
-Only <span id="countdown"></span> until the Epoch Time is <strong><?=$coolepoch;?>!</strong> (<script>document.write(new Date(<?= $coolepoch * 1000 ?>))</script>)
-</p>
+<body>
+<div id="main">
+	<span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span>
+	<br>
 
-<p class="desc2">
-	A quick idea by <a href='http://www.chrisrowe.net'>Chris Rowe</a> follow him on Twitter <a href='http://www.twitter.com/chrisrowe'>@chrisrowe</a><br>
-	Extended by <a href="https://geymayer.com">Daniel Geymayer</a>
-</p>
+	<p class="desc">
+		Only <span id="countdown"></span> until the Epoch Time is <strong><?= $coolepoch ?>!</strong> (<script>document.write(new Date(<?= $coolepoch * 1000 ?>))</script>)
+	</p>
 
-</div><div id="fireworks-template"><div id="fw" class="firework"></div><div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div></div><div id="fireContainer"></div>
+	<p class="desc2">
+		A quick idea by <a href='http://www.chrisrowe.net'>Chris Rowe</a> follow him on Twitter <a href='http://www.twitter.com/chrisrowe'>@chrisrowe</a>
+		<br>
+		Extended by <a href="https://geymayer.com">Daniel Geymayer</a>
+	</p>
+</div>
+
+<div id="fireworks-template"><div id="fw" class="firework"></div><div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div></div><div id="fireContainer"></div>
+
 <script>
 var wooAudio = new Audio('audio/woo.mp3');
 
