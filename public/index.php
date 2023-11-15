@@ -6,7 +6,6 @@
 <link rel="shortcut icon" href="/favicon.ico">
 <link rel="stylesheet" type="text/css" href="style/fireworks.css" media="screen" />
 <script type="text/javascript" src="script/jquery.min.js"></script>
-<script type="text/javascript" src="script/soundmanager2.js"></script>
 <script type="text/javascript" src="script/fireworks.js"></script>
 </head>
 
@@ -22,9 +21,7 @@ Only <span id="countdown"></span> until the Epoch Time is <strong><?=$coolepoch;
 
 </div><div id="fireworks-template"><div id="fw" class="firework"></div><div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div></div><div id="fireContainer"></div>
 <script>
-soundManager.url='/soundmanager2.swf';
-soundManager.debugMode=false;
-soundManager.onload=function(){soundManager.createSound('woo','/audio/woo.mp3');}
+var wooAudio = new Audio('audio/woo.mp3');
 
 recount();
 var doparty=false;
@@ -114,7 +111,7 @@ function partytime(){
 	finish=0;
 	doparty=true;
 	document.title="HAPPY <?= $coolepoch ?>!!!";
-	soundManager.play('woo');
+	wooAudio.play();
 	$(".desc").text("Woohoo!!! The epoch timestamp just passed <?= $coolepoch ?>!!!");
 }
 
