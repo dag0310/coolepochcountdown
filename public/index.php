@@ -37,7 +37,7 @@ recount();
 var doparty=false;
 var finish=0;
 var appended=false;
-setInterval("recount()",1000);
+setInterval(recount,1000);
 
 function recount(){
 
