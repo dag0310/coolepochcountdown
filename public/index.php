@@ -10,22 +10,15 @@
 <script type="text/javascript" src="script/fireworks.js"></script>
 </head>
 
-
-<!-- IF YOU'RE TRYING TO CHEAT AND SEE WHAT HAPPENED AT <?=$coolepoch;?> THEN STICK javascript:partytime(); IN YOUR ADDRESS BAR -->
-
-
 <body><div id="main"><span id="timer"><script>var d = new Date();var t = d.getTime();var o = t+"";document.write(o.substring(0,10));</script></span><br/>
 <p class="desc">
-	You missed <?=$coolepoch;?> :(
-	<!-- <br>
-	But fear not - some other people captured the <span class="fun">1234567890 epoch moment</span> <a href='https://www.youtube.com/results?search_query=unix%201234567890'>on YouTube</a>, or see the <a href="http://abstrusegoose.com/116">Abstruse Goose</a> or <a href='http://xkcd.com/376/'>XKCD</a> cartoon or just read more about Unix time&nbsp;<a href='http://en.wikipedia.org/wiki/Unix_time'>on&nbsp;Wikipedia</a> -->
+Only <span id="countdown"></span> until the Epoch Time is <strong><?=$coolepoch;?>!</strong> (<script>document.write(new Date(<?= $coolepoch * 1000 ?>))</script>)
 </p>
 
 <p class="desc2">
 	A quick idea by <a href='http://www.chrisrowe.net'>Chris Rowe</a> follow him on Twitter <a href='http://www.twitter.com/chrisrowe'>@chrisrowe</a><br>
 	Extended by <a href="https://geymayer.com">Daniel Geymayer</a>
 </p>
-
 
 </div><div id="fireworks-template"><div id="fw" class="firework"></div><div id="fp" class="fireworkParticle"><img src="image/particles.gif" alt="" /></div></div><div id="fireContainer"></div>
 <script>
@@ -90,6 +83,8 @@ function recount(){
 	if(o.substring(0,10)<<?=$coolepoch;?>){
 		document.title=thetext + " to go...";
 		$("#tweet").attr("href",tweeturl);
+	}else{
+		missedit();
 	}
 
 	if(finish<30){
@@ -126,7 +121,7 @@ function partytime(){
 function missedit(){
 	if (appended == false){
 		$(".desc2").append("&nbsp;&bull;&nbsp;<span class='fun'>Relive the moment</span>");
-		$(".desc").text("You missed it but you can relive the moment below");
+		$(".desc").text("You missed it, but fear not - the next cool epoch time will come soon enough :)");
 		var tweeturl="http://twitter.com/home?status=I just watched the unix epoch time reach <?= $coolepoch ?> http://coolepochcountdown.com WAHOO";
 		$("#tweet").attr("href",tweeturl);
 		appended=true;
