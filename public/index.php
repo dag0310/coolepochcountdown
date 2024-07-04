@@ -25,7 +25,7 @@
 
 	<p class="desc">
 		Here are some other cool epoch times:
-<?php foreach ($coolepochtimes_in_future as $cetif): ?>
+<?php foreach ($coolepochtimes_in_future as $idx => $cetif): if ($cetif === $coolepoch): continue; endif; ?>
 		<a href="?t=<?= $cetif ?>"><?= $cetif ?></a>
 <?php endforeach ?>
 	</p>
