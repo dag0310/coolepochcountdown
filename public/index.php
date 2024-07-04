@@ -1,6 +1,6 @@
 <?php $coolepochtimes = [1234567890, 1700000000, 1717171717, 1777777777, 1800000000, 1818181818, 1888888888, 1900000000, 1919191919, 1999999999, 2000000000, 202020202020, 2100000000, 2121212121, 2147485547]; ?>
 <?php $coolepochtimes_in_future = []; foreach ($coolepochtimes as $cet) { if (time() > $cet) continue; $coolepochtimes_in_future[] = $cet; } ?>
-<?php $coolepoch = !empty($_GET['t']) ? $_GET['t'] : strval($coolepochtimes_in_future[0]); ?><!DOCTYPE html>
+<?php $coolepoch = !empty($_GET['t']) ? intval($_GET['t']) : $coolepochtimes_in_future[0] ?? end($coolepochtimes); ?><!DOCTYPE html>
 <html>
 <head>
 	<title>Countdown (actually up) to the UNIX Epoch time being <?= $coolepoch ?>!</title>
